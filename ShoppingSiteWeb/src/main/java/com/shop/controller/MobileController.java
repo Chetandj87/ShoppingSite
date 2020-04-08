@@ -28,4 +28,10 @@ public class MobileController {
 		mobileService.addMobile(mobile);
 		return "redirect:/";
 	}
+	
+	@RequestMapping("/display")
+	public String displayMobile(ModelMap map) {
+		map.addAttribute("mobiles", mobileService.displayMobiles());
+		return "displaymobiles";
+	}
 }

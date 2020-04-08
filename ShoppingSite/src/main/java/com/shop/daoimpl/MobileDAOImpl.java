@@ -35,6 +35,7 @@ public class MobileDAOImpl implements MobileDAO {
 		return true;
 	}
 
+	@SuppressWarnings("unchecked")
 	public List<Mobile> displayMobiles() {
 		
 		return sessionFactory.getCurrentSession().createQuery("from com.shop.model.Mobile").list();
