@@ -58,7 +58,7 @@ public class MobileTest {
 	}
 	
 	@Test
-	//@Ignore
+	@Ignore
 	public void displayBookById() {
 		assertNotNull(mobileService.displayByMobileId(2));
 	}

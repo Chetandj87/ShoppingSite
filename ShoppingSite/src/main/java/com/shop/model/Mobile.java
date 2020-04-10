@@ -16,9 +16,16 @@ public class Mobile {
 	@Column
 	private String mobilename;
 	private String brandname;
+	private String mobileimage;
 	private int ram;
 	private int storage;
 	
+	public String getMobileimage() {
+		return mobileimage;
+	}
+	public void setMobileimage(String mobileimage) {
+		this.mobileimage = mobileimage;
+	}
 	public int getMobileid() {
 		return mobileid;
 	}

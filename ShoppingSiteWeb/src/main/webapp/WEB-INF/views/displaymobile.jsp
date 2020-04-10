@@ -2,9 +2,11 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
-	<footer>
-		<div>
-			<p><strong>Shopping Site</strong> by <a href="#">Chetan Poojari</a>.</p>
-		</div>
-	</footer>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
 </html>

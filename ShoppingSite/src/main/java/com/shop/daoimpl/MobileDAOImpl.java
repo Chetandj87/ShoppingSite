@@ -18,6 +18,7 @@ public class MobileDAOImpl implements MobileDAO {
 	
 	@Autowired
 	SessionFactory sessionFactory;
+
 	public boolean addMobile(Mobile mobile) {
 		sessionFactory.getCurrentSession().save(mobile);
 		return true;

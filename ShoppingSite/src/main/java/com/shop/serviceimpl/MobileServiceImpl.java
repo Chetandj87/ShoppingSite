@@ -14,6 +14,7 @@ public class MobileServiceImpl implements MobileService{
 
 	@Autowired
 	MobileDAO mobileDAO;
+	
 	public boolean addMobile(Mobile mobile) {
 		mobileDAO.addMobile(mobile);
 		return true;
