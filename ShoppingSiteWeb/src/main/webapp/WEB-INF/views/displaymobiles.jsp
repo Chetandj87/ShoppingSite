@@ -15,9 +15,13 @@
 </head>
 <jsp:include page="header.jsp"></jsp:include>
     <section class="section">
-    	<h2 class="title">Popular Books</h2>
     	<div class="container">
-    		<c:forEach items="${mobiles}" var="mobile">
+    		<h2 class="title">Popular Mobiles</h2>
+    	</div>
+    	
+    	<section class="section">
+    	<div class="container">
+    	<c:forEach items="${mobiles}" var="mobile">
 		        <div class="card">
 				<div class="card-image">
 					<figure class="image is-4by4">
@@ -67,7 +71,8 @@
 				</footer>
 				</div>
 	        </c:forEach>
-		</div>
+	        </div>
+		</section>
 	</section>
 <jsp:include page="footer.jsp"></jsp:include>
 </html>

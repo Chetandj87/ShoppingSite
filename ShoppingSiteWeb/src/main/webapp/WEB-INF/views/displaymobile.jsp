@@ -20,7 +20,7 @@
 			<img alt="${mobile.mobilename}" src='<sp:url value="/images/${mobile.mobilename}/${mobile.mobileimage}"></sp:url>'>
 		</figure>
 		</div>
-		<div class="column  is-two-thirds">
+		<div class="column  is-two-fifths">
 			<nav class="breadcrumb" aria-label="breadcrumbs">
 			<ul>
 				<li><a href="${pageContext.request.contextPath}/home">Home</a></li>
@@ -42,6 +42,7 @@
 				</div>
 			</div>
 			
+			<div class="column is-full">
 			<div class="container">
 			<div class="field is-grouped">
 				<p class="control">
@@ -50,14 +51,21 @@
 				<p class="control">
 				<a class="button is-success" href="">Buy Now</a>
 				</p>
+				<sec:authorize access="hasAuthority('admin') and isAuthenticated()">
 				<p class="control">
 				<a class="button is-warning" href="${pageContext.request.contextPath}/mobile/edit/${mobile.mobileid}">Edit</a>
 				</p>
 				<p class="control">
 				<a class="button is-danger" href="${pageContext.request.contextPath}/mobile/delete/${mobile.mobileid}">Delete</a>
 				</p>
+				</sec:authorize>
 			</div>
 			</div>
+			</div>
+		</div>
+		
+		<div class="column">
+			<p>New options will be available soon.</p>
 		</div>
 	</div>
 	</div>
