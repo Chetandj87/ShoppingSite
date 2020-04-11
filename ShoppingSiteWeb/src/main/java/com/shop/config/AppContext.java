@@ -3,6 +3,7 @@ package com.shop.config;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
@@ -13,8 +14,8 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 @SuppressWarnings("deprecation")
 @Configuration
 @EnableWebMvc
-//@ComponentScan(basePackages="com.niit")
-//@ComponentScan(basePackages="com.niit.controller")
+//@ComponentScan(basePackages="com.shop")
+//@ComponentScan(basePackages="com.shop.controller")
 @ComponentScan(basePackages="com.shop.*")
 public class AppContext extends WebMvcConfigurerAdapter
 {
@@ -25,18 +26,18 @@ public class AppContext extends WebMvcConfigurerAdapter
 //        registry.setOrder(Ordered.HIGHEST_PRECEDENCE);
 //    }
 //	
-//	 @Bean(name="multipartResolver") 
-//	    public CommonsMultipartResolver getResolver() {
-//	        CommonsMultipartResolver resolver = new CommonsMultipartResolver();
-//	         
-//	        //Set the maximum allowed size (in bytes) for each individual file.
-//	        resolver.setMaxUploadSizePerFile(5242880);//5MB
-//	         
-//	        //You may also set other available properties.
-//	         
-//	        return resolver;
-//	    }
-//	 
+	 @Bean(name="multipartResolver") 
+	    public CommonsMultipartResolver getResolver() {
+	        CommonsMultipartResolver resolver = new CommonsMultipartResolver();
+	         
+	        //Set the maximum allowed size (in bytes) for each individual file.
+	        resolver.setMaxUploadSizePerFile(5242880);//5MB
+	         
+	        //You may also set other available properties.
+	         
+	        return resolver;
+	    }
+	 
 	@Bean
 	public ViewResolver viewResolver()
 	{
